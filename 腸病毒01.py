@@ -41,7 +41,7 @@ plt.ylabel(
     "腸\n病\n毒\n就\n診\n人\n次\n(萬)", fontsize=16, rotation=0, labelpad=20, y=0.3
 )
 plt.title("每週腸病毒就診人次", fontsize=24)
-for i in s2.index[::5]:  # 每隔5週顯示一次數字
+for i in s2.index[::10]:  # 每隔10週顯示一次數字
     plt.text(
         i,
         s2[i] / 10000,
