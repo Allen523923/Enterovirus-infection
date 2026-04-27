@@ -166,7 +166,7 @@ df["六都"] = df["縣市"].apply(
 s6 = df.groupby("六都")["腸病毒健保就診人次"].sum()
 labels = [f"{idx}\n({val:,}人)" for idx, val in s6.items()]
 plt.pie(s6.values, labels=labels, autopct="%.2f%%")
-plt.title("六都與非六都腸病毒就診人次佔比", fontsize=24)
+plt.title("六都與非六都腸病毒就診人次佔比", fontsize=20)
 
 
 # 7.各六都腸病毒就診人次比率畫成圓餅圖
@@ -174,7 +174,7 @@ plt.subplot(248)
 s7 = df[df["六都"] == "六都"].groupby("縣市")["腸病毒健保就診人次"].sum()
 labels = [f"{idx} \n({val:,})人" for idx, val in s7.items()]
 plt.pie(s7.values, labels=labels, autopct="%.2f%%")
-plt.title("六都腸病毒就診人次比率", fontsize=24)
+plt.title("六都腸病毒就診人次比率", fontsize=20)
 
 plt.tight_layout()
 plt.savefig("腸病毒就診統計資料.png")
