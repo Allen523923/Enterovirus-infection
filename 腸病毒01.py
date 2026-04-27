@@ -166,7 +166,7 @@ df["六都"] = df["縣市"].apply(
 s6 = df.groupby("六都")["腸病毒健保就診人次"].sum()
 labels = [f"{idx}\n({val:,}人)" for idx, val in s6.items()]
 plt.pie(s6.values, labels=labels, autopct="%.2f%%")
-plt.title("六都與非六都腸病毒就診人次佔比", fontsize=20)
+plt.title("六都與非六都\n腸病毒就診人次佔比", fontsize=20)
 
 
 # 7.各六都腸病毒就診人次比率畫成圓餅圖
